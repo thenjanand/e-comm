@@ -26,6 +26,10 @@
   --trans-color: color 0.3s;
 }
 
+/* 
+******************** CSS RESET ************************
+ */
+
 * {
   margin: 0;
   padding: 0;
@@ -44,25 +48,182 @@ body {
   color: var(--dark-color);
   background-color: var(--white-color);
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
 }
-ul{
+ul {
   list-style: none;
 }
-img{
+img {
   max-width: var(--percent100);
   vertical-align: middle;
 }
-strong{
+strong {
   font-weight: var(--fw8);
 }
-table{
+table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-input::placeholder{
+input::placeholder {
   font: inherit;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins";
+}
+h1 {
+  font-size: calc(1.3em+1vw);
+  font-weight: var(--fw8);
+  line-height: 1;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: var(--fw7);
+}
+h4 {
+  font-size: 1em;
+  font-weight: var(--fw6);
+}
+
+/*
+*************** Resuable Selector ***********************
+*/
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0.938em;
+}
+.column {
+  margin-left: -0.938em;
+  margin-right: -0.938em;
+}
+.column .row {
+  padding: 0.938em;
+}
+.flexwrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexitem {
+  display: flex;
+  align-items: center;
+}
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.main-links a:hover {
+  color: var(--secondary-color);
+}
+.second-link a:hover {
+  color: var(--light-text-color);
+}
+.icon-small,
+.icon-large {
+  display: flex;
+  align-items: center;
+  padding: 0 0.25em;
+  font-weight: normal;
+}
+.icon-small {
+  font-size: 1.25em;
+  margin: auto;
+}
+.icon-large {
+  font-size: 1.75em;
+  padding: 0 0.75em 0 0;
+}
+/*
+***************** Structure Styling **************************
+00. Reusable Selector
+
+01. HEADER
+  a. Header Top
+  b. Header Nav
+  c. Header Main , Departments Category
+  d. Search Form
+  e. Resposive Menu - OFF Canvas
+
+02. SLIDER 
+03. BRANDS
+04. PRODUCTS
+  a. Global Product
+  b. BIG Product
+  c. MINI Product
+  d. Main Product
+05. BANNER
+  a. News Letter
+  b. Widgets
+  c. Footer Info
+06. BOTTOM MENU
+  a. Search
+07. OVERLAY
+08. PAGE SINGLE
+  a. Breadcrumb
+  b. Product Details
+  c. Product Description
+  d. Product Review
+  e. Product Review Form
+09. PAGE SINGLE :SPECIAL OFFER
+10. PAGE CATEGORY
+  a. Sidebar Product Filter
+  b. Product Block
+11. CART
+12. PAGE CART
+13. PAGE CHECKOUT
+14. MODAL
+15. RESPONSIVE
+
+*
+******************************************/
+/* HEADER */
+
+header li > a {
+  display: flex;
+  position: relative;
+  line-height: inherit;
+}
+
+/* a. Header Top */
+.header-top .wrapper {
+  font-size: var(--font-small);
+  font-weight: var(--fw3);
+  justify-content: space-between;
+  line-height: 42px;
+}
+.header-top .wrapper ul {
+  gap: 2em;
+
+}
+.header-top li{
+  position: relative;
+}
+
+/*  b. Header Nav */
+
+/* c. Header Main , Departments Category */
+
+/* d. Search Form */
+
+/* e. Resposive Menu - OFF Canvas */
+
+@media screen and (min-width: 992px) {
+  .container {
+    padding: 0 2em;
+  }
 }
