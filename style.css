@@ -7,7 +7,8 @@
   --white-color: #ffffff;
   --light-bg-color: #f2f3f5;
   --light-text-color: #7c899a;
-  --border-color: #0a021c;
+  --border-color:#e5e8ec;
+  --dark-color: #0a021c;
 
   --font-small: 13px;
   --font-smaller: 11px;
@@ -197,6 +198,7 @@ header li > a {
   display: flex;
   position: relative;
   line-height: inherit;
+  transform: ;
 }
 
 /* a. Header Top */
@@ -208,12 +210,28 @@ header li > a {
 }
 .header-top .wrapper ul {
   gap: 2em;
-
 }
-.header-top li{
+.header-top li {
   position: relative;
 }
-
+.header-top ul ul {
+  position: absolute;
+  left: -1em;
+  line-height: 2em;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  z-index: 1;
+  display: none;
+}
+.header-top .right ul ul li a {
+  padding: 0.25em 1em;
+}
+.header-top .right ul ul li.current a {
+  background-color: var(--border-color);
+}
+.header-top li:hover ul{
+  display: block;
+}
 /*  b. Header Nav */
 
 /* c. Header Main , Departments Category */
